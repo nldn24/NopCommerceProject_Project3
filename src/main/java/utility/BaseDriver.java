@@ -12,7 +12,6 @@ public class BaseDriver {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(ConfigReader.getIntProperty("implicitWait")));
 
-
         return driver;
     }
 

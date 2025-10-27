@@ -5,8 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage{
+
+    @FindBy(xpath = "//div[@class='topic-block-title']/h2")
+    private WebElement verifyHomePageText;
+
     @FindBy(xpath = "//div[@class='header-links']/ul/li[1]/a")
-    private WebElement registerButton;
+    private WebElement homePageregisterButton;
 
     @FindBy(xpath = "//div[@class='header-links']/ul/li[2]/a")
     private WebElement loginButton;
@@ -73,8 +77,12 @@ public class HomePage extends BasePage{
         super(driver);
     }
 
+    public void verifyhomePage(){
+        verifyDisplayed(verifyHomePageText,"HomePage not loaded");
+    }
+
     public void clickRegisterButton(){
-        clickElement(registerButton);
+        clickElement(homePageregisterButton);
         LOGGER.info("Register Button Clicked");
     }
 
