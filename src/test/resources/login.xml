@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="User Login">
+    <test name="User login created">
+        <parameter name="email" value="keciy81655@filipx.com"/>
+        <parameter name="password" value="Password123"/>
+        <classes>
+            <class name="US_502_UserLogin.US_502_UserLogin"/>
+        </classes>
+    </test>
+</suite>
