@@ -3,8 +3,10 @@ package Pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utility.ConfigReader;
 
-public class RegisterPage extends BasePage{
+
+public class RegisterPage extends BasePage {
 
 
     @FindBy(xpath = "//div[@class='page-title']/h1")
@@ -42,20 +44,58 @@ public class RegisterPage extends BasePage{
         super(driver);
     }
 
-    public void verifyRegisterPage(){
-        verifyDisplayed(registerPageText,"Register Page not loaded");
+    public void verifyRegisterPage() {
+        verifyDisplayed(registerPageText, "Register Page not loaded");
         LOGGER.info("Register page verified successfully");
     }
-    public void selectMaleGender(){
+
+    public void selectMaleGender() {
         clickElement(genderMale);
         LOGGER.info("Male gender clicked");
     }
-    public void selectFemaleGender(){
+
+    public void selectFemaleGender() {
         clickElement(genderFemale);
         LOGGER.info("Female gender clicked");
     }
 
-    public void clickedFirstnameInput(){
+    public void fillFirstName() {
         clickElement(firstnameInput);
+        sendKeysToElement(firstnameInput, ConfigReader.getProperty("firstname"));
+        LOGGER.info("Firstname sent to firstname input");
+    }
+
+    public void fillLastName() {
+        clickElement(lastnameInput);
+        sendKeysToElement(lastnameInput, ConfigReader.getProperty("lastname"));
+        LOGGER.info("Lastname sent to lastname input");
+    }
+
+    public void fillEmail() {
+        clickElement(emailInput);
+        sendKeysToElement(emailInput, ConfigReader.getProperty("email"));
+        LOGGER.info("Email sent to email input");
+    }
+
+    public void fillPassword() {
+        clickElement(passwordInput);
+        sendKeysToElement(passwordInput, ConfigReader.getProperty("password"));
+        LOGGER.info("Password sent to password input");
+    }
+
+    public void fillConfirmPassword() {
+        clickElement(confirmPasswordInput);
+        sendKeysToElement(confirmPasswordInput, ConfigReader.getProperty("password"));
+        LOGGER.info("Password sent to ConfirmPassword input");
+    }
+
+    public void clickRegisterButton() {
+        clickElement(registerButton);
+        LOGGER.info("Register Button Clicked");
+    }
+
+    public void verifyRegisterCompleted() {
+        verifyDisplayed(successfulCompletionText, "Register process not completed");
+        LOGGER.info("Register process successfully completed. ");
     }
 }
