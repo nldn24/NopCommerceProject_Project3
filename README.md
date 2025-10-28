@@ -68,7 +68,7 @@ NopCommerceProject_Project3/
     └── test/
         ├── java/
         │   ├── US_501_UserRegistration/
-        │   ├── US_502_UserLogin/
+        │   ├── US_502_UserLogin.US_502_UserLogin/
         │   ├── US_503_PositiveAndNegativeLoginCombinations/
         │   ├── US_504_TabMenuControl/
         │   ├── US_505_ControlOfProductsInTheTABMenu/

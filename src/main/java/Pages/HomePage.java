@@ -85,5 +85,9 @@ public class HomePage extends BasePage{
         clickElement(homePageregisterButton);
         LOGGER.info("Register Button Clicked");
     }
+    public void clickLoginButton(){
+        clickElement(loginButton);
+        LOGGER.info("CLicked login button");
+    }
 
 }
