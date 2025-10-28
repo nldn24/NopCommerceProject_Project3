@@ -66,8 +66,18 @@ public class DashboardPage extends BasePage{
     @FindBy(xpath = "//ul[@class='top-menu notmobile']/li[7]/a")
     private WebElement giftCardsButton;
 
+    @FindBy(xpath = "//a[@class='ico-login']")
+    private WebElement loginButton;
+
 
     public DashboardPage(WebDriver driver) {
         super(driver);
+    }
+    public void verifyMyAccount(){
+        verifyDisplayed(MyAccountButton,"My account button is not visibled");
+    }
+
+    public void clickLoginButton(){
+        clickElement(loginButton);
     }
 }

@@ -1,5 +1,7 @@
 package US_502_UserLogin;
 
+import Pages.DashboardPage;
+import Pages.LoginPage;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import jdk.jfr.Description;
@@ -55,6 +57,13 @@ public class US_502_UserLogin extends BaseGUITest {
     @Severity(SeverityLevel.CRITICAL)
     public void clickLoginButton(){
         loginPage.clickLoginBtn();
+    }
+
+    @Test(priority = 6, description = "Entry approved.")
+    @Description("Entry approved.")
+    @Severity(SeverityLevel.CRITICAL)
+    public void verifyLogin(){
+        dashboardPage.verifyMyAccount();
     }
 
 }
