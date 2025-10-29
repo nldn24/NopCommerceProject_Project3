@@ -77,7 +77,8 @@ public class HomePage extends BasePage{
         super(driver);
     }
 
-    public void verifyhomePage(){
+    public void verifyHomePage(){
+
         verifyDisplayed(verifyHomePageText,"HomePage not loaded");
     }
 

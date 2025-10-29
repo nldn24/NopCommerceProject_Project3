@@ -22,7 +22,7 @@ public class ControlOfProductsInTheTABMenu extends BaseGUITest {
     }
     @Test(priority = 1)
     public  void verifyHomePage(){
-        homePage.verifyhomePage();
+        homePage.verifyHomePage();
     }
     @Test(priority = 2)
     public  void clickRegisterButton(){
