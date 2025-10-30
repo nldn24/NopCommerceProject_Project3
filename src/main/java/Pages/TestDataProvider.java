@@ -1,4 +1,4 @@
-package US_503_PositiveAndNegativeLoginCombinations;
+package Pages;
 import org.testng.annotations.DataProvider;
 import utility.ConfigReader;
 
