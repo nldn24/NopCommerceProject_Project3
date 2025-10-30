@@ -1,5 +1,6 @@
 package US_503_PositiveAndNegativeLoginCombinations;
 
+import Pages.TestDataProvider;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import jdk.jfr.Description;
@@ -20,7 +21,7 @@ public class US_503_PositiveAndNegativeLoginCombinations extends BaseGUITest {
     @Description("Navigate to Website.")
     @Severity(SeverityLevel.CRITICAL)
     public void navigateToWebsite(){
-        homePage.verifyhomePage();
+        homePage.verifyHomePage();
     }
 
     @Test(priority = 2, description = "The customer clicks the login button.")

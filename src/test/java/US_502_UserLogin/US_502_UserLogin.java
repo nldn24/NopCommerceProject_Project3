@@ -21,7 +21,7 @@ public class US_502_UserLogin extends BaseGUITest {
     @Description("Navigate to Website.")
     @Severity(SeverityLevel.CRITICAL)
     public void navigateToWebsite(){
-        homePage.verifyhomePage();
+        homePage.verifyHomePage();
     }
 
     @Test(priority = 2, description = "The customer clicks the login button.")
