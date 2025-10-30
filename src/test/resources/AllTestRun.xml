@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ParallelTestSuite" parallel="classes" thread-count="10">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+    <test name="AllTests">
+        <parameter name="BrowserType" value="chrome"/>
+        <classes>
+            <class name="US_501_UserRegistration.US501"/>
+            <class name="US_502_UserLogin.US_502_UserLogin"/>
+            <class name="US_503_PositiveAndNegativeLoginCombinations.US_503_PositiveAndNegativeLoginCombinations"/>
+            <class name="US_504_TabMenuControl.US_504"/>
+            <class name="US_505_ControlOfProductsInTheTABMenu.ControlOfProductsInTheTABMenu"/>
+            <class name="US_506_GiftOrderingProcess.US_506"/>
+            <class name="US_507_ComputerOrderProcess.US_507"/>
+            <class name="US_508_ParameterizedSearchProcess.US_508"/>
+        </classes>
+    </test>
+</suite>

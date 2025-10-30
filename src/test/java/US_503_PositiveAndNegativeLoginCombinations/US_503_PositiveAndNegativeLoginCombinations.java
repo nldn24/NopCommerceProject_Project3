@@ -1,6 +1,5 @@
 package US_503_PositiveAndNegativeLoginCombinations;
 
-import Pages.HomePage;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import jdk.jfr.Description;
