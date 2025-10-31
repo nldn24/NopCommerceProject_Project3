@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class DashboardPage extends BasePage{
+public class DashboardPage extends BasePage {
 
     @FindBy(xpath = "//div[@class='header-links']/ul/li[1]/a")
     private WebElement MyAccountButton;
@@ -73,11 +73,21 @@ public class DashboardPage extends BasePage{
     public DashboardPage(WebDriver driver) {
         super(driver);
     }
-    public void verifyMyAccount(){
-        verifyDisplayed(MyAccountButton,"My account button is not visibled");
+
+    public void verifyMyAccount() {
+        verifyDisplayed(MyAccountButton, "My account button is not visibled");
     }
 
-    public void clickLoginButton(){
+    public void clickLoginButton() {
         clickElement(loginButton);
+    }
+
+
+    public void computerHover() {
+        hoverOver(computersBtn);
+    }
+
+    public void desktopsBttn() {
+        clickElement(desktopsSubButton);
     }
 }
