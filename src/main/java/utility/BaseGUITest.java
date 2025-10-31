@@ -1,9 +1,6 @@
 package utility;
 
-import Pages.DashboardPage;
-import Pages.HomePage;
-import Pages.LoginPage;
-import Pages.RegisterPage;
+import Pages.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -21,6 +18,7 @@ public class BaseGUITest {
     protected LoginPage loginPage;
     protected RegisterPage registerPage;
     protected DashboardPage dashboardPage;
+    protected GiftCardsPage giftCardsPage;
 
     protected Properties config;
 
@@ -33,6 +31,8 @@ public class BaseGUITest {
         loginPage = new LoginPage(driver);
         registerPage = new RegisterPage(driver);
         dashboardPage = new DashboardPage(driver);
+        giftCardsPage = new GiftCardsPage(driver);
+
     }
 
     @AfterClass
