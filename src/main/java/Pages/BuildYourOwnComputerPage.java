@@ -1,5 +1,6 @@
 package Pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,10 +13,10 @@ public class BuildYourOwnComputerPage extends BasePage {
     @FindBy(xpath = "//label[@for='product_attribute_3_6']")
     private WebElement hddSelect;
 
-    @FindBy(xpath = "//div[@class='overview']")
+    @FindBy(xpath = "//button[@id='add-to-cart-button-1']")
     private WebElement addToCartBtn;
 
-    @FindBy(xpath = "//*[@id=\"bar-notification\"]/div/p")
+    @FindBy(xpath = "//div[@class='bar-notification success']")
     private WebElement addToCartVerify;
 
 
@@ -35,6 +36,11 @@ public class BuildYourOwnComputerPage extends BasePage {
         verifyDisplayed(addToCartVerify,"The “Added to cart” message did not appear.");
     }
 
+    public void scrollDown() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0, 500);");
+        LOGGER.info("The scroll worked successfully.");
+    }
 
 
 

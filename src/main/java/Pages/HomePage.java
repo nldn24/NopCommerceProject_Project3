@@ -100,7 +100,7 @@ public class HomePage extends BasePage {
     }
 
     public void verifyTabMenu() {
-        verifyDisplayed(tabMenu, "Tab Menu is not visible");
+        verifyDisplayed((WebElement) tabMenu, "Tab Menu is not visible");
         LOGGER.info("Tab Menu is visible");
     }
 

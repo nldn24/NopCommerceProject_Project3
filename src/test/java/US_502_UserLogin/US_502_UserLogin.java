@@ -29,7 +29,7 @@ public class US_502_UserLogin extends BaseGUITest {
     @Severity(SeverityLevel.CRITICAL)
     public void clickLoginBtn(){
         homePage.clickLoginButton();
-        BaseDriver.threadWait(3);
+
     }
 
 
@@ -39,7 +39,7 @@ public class US_502_UserLogin extends BaseGUITest {
     public void emailInput(){
         loginPage.emailInput(ConfigReader.getProperty("email"));
         LOGGER.info("The customer was able to enter their email address in the email section.");
-        BaseDriver.threadWait(5);
+
 
     }
 
@@ -49,7 +49,7 @@ public class US_502_UserLogin extends BaseGUITest {
     public void passwordInput(){
         loginPage.passwordInput(ConfigReader.getProperty("password"));
         LOGGER.info("The customer entered their password in the password field.");
-        BaseDriver.threadWait(3);
+
     }
 
     @Test(priority = 5, description = "The customer clicks the login button.")
