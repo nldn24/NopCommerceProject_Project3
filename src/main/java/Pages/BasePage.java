@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.List;
 
 public class BasePage {
     protected final Logger LOGGER = LogManager.getLogger(this.getClass());
@@ -89,5 +90,11 @@ public class BasePage {
     public void selected(WebElement seçim, String value){
         Select selects=new Select(seçim);
         selects.selectByValue(value);
+    }
+
+    public void checkList(List<WebElement> elements, List<String> names) {
+        for (int i = 0; i < elements.size(); i++) {
+            Assert.assertEquals(elements.get(i).getText(), names.get(i), "Tab Menu elements are not listed");
+        }
     }
 }
