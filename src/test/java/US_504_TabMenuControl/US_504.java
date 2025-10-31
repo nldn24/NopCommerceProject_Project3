@@ -68,6 +68,7 @@ public class US_504 extends BaseGUITest {
     public String step(String message) {
         return message;
     }
+
 }
 
 
