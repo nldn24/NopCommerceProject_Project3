@@ -23,6 +23,8 @@ public class BaseGUITest {
     protected RegisterPage registerPage;
     protected DashboardPage dashboardPage;
     protected Desktopspage desktopspage;
+    protected GiftCardsPage giftCardsPage;
+
     protected Properties config;
     protected BuildYourOwnComputerPage buildYourOwnComputerPage;
 
@@ -40,6 +42,7 @@ public class BaseGUITest {
         dashboardPage = new DashboardPage(driver);
         desktopspage=new Desktopspage(driver);
         buildYourOwnComputerPage=new BuildYourOwnComputerPage(driver);
+        giftCardsPage = new GiftCardsPage(driver);
 
     }
 

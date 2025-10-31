@@ -13,16 +13,7 @@ import utility.BaseDriver;
 import utility.BaseGUITest;
 
 public class US501 extends BaseGUITest {
-    HomePage homePage;
-    RegisterPage registerPage;
 
-    private static final Logger LOGGER = LogManager.getLogger(US501.class);
-
-    @BeforeClass(alwaysRun = true)
-    public void  setupPages(){
-        homePage = new HomePage(driver);
-        registerPage=new RegisterPage(driver);
-    }
     @Test(priority = 1, groups = {"Smoke","Registration"}, description = "Verify that home page is visible successfully")
     @Description("Verify that home page is visible successfully")
     @Severity(SeverityLevel.CRITICAL)
