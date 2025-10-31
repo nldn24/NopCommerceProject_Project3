@@ -36,7 +36,7 @@ public class BaseGUITest {
 
 
         config=new Properties();
-        homePage = new HomePage(driver);
+         homePage= new HomePage(driver);
         loginPage = new LoginPage(driver);
         registerPage = new RegisterPage(driver);
         dashboardPage = new DashboardPage(driver);
