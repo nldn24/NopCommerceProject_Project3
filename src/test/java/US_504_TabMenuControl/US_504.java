@@ -64,6 +64,8 @@ public class US_504 extends BaseGUITest {
         BaseDriver.threadWait(3);
         LOGGER.info("Tab Menu's subtabs are clickable");
     }
+
+
     @Attachment(value = "Adim sayisi", type = "text/plain")
     public String step(String message) {
         return message;
