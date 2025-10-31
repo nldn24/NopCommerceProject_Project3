@@ -3,8 +3,12 @@ package Pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
-public class HomePage extends BasePage{
+import java.util.ArrayList;
+import java.util.List;
+
+public class HomePage extends BasePage {
 
     @FindBy(xpath = "//div[@class='topic-block-title']/h2")
     private WebElement verifyHomePageText;
@@ -72,23 +76,35 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//ul[@class='top-menu notmobile']/li[7]/a")
     private WebElement giftCardsButton;
 
+    @FindBy(xpath = "//ul[@class='top-menu notmobile']")
+    private List<WebElement> tabMenu;
+
 
     public HomePage(WebDriver driver) {
         super(driver);
     }
 
-    public void verifyHomePage(){
+    public void verifyHomePage() {
 
-        verifyDisplayed(verifyHomePageText,"HomePage not loaded");
+        verifyDisplayed(verifyHomePageText, "HomePage not loaded");
     }
 
-    public void clickRegisterButton(){
+    public void clickRegisterButton() {
         clickElement(homePageregisterButton);
         LOGGER.info("Register Button Clicked");
     }
-    public void clickLoginButton(){
+
+    public void clickLoginButton() {
         clickElement(loginButton);
         LOGGER.info("CLicked login button");
     }
 
+    public void verifyTabMenu() {
+        verifyDisplayed(tabMenu, "Tab Menu is not visible");
+        LOGGER.info("Tab Menu is visible");
+    }
+
+
 }
+
+
