@@ -1,6 +1,7 @@
 package US_506_GiftOrderingProcess;
 
 import Pages.GiftCardsPage;
+import io.qameta.allure.Attachment;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -122,6 +123,10 @@ public class US_506 extends BaseGUITest {
         giftCardsPage.verifyProductName();
         LOGGER.info("Product name visible");
         BaseDriver.threadWait(2);
+    }
+    @Attachment(value = "Adim sayisi", type = "text/plain")
+    public String step(String message) {
+        return message;
     }
 
 

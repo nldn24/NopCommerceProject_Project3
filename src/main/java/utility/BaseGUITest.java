@@ -27,6 +27,7 @@ public class BaseGUITest {
 
     protected Properties config;
     protected BuildYourOwnComputerPage buildYourOwnComputerPage;
+    protected ProductSearchPage productSearchPage;
 
 
     @BeforeClass
@@ -43,6 +44,7 @@ public class BaseGUITest {
         desktopspage=new Desktopspage(driver);
         buildYourOwnComputerPage=new BuildYourOwnComputerPage(driver);
         giftCardsPage = new GiftCardsPage(driver);
+        productSearchPage = new ProductSearchPage(driver);
 
     }
 
