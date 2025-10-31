@@ -63,5 +63,66 @@ public class US_506 extends BaseGUITest {
     public void clickGiftCards(){
         giftCardsPage.clickGiftCards();
         LOGGER.info("Gift cards button clicked.");
+
     }
+    @Test(priority = 8,groups = {"Smoke","Login Test"}, description = "Add to Card button clicked successfully.")
+    @Description("Add to Card button clicked successfully.")
+    @Severity(SeverityLevel.CRITICAL)
+    public void clickAddToCard(){
+        giftCardsPage.clickAddToCard();
+        LOGGER.info("Add to Card button clicked.");
+        BaseDriver.threadWait(2);
+
+    }
+    @Test(priority = 9, groups = {"Smoke","Registration"}, description = "Recipient's name entered successfully.")
+    @Description("Recipient's name entered successfully.")
+    @Severity(SeverityLevel.CRITICAL)
+    public  void fillRecipientsName(){
+        giftCardsPage.fillRecipientsName();
+        LOGGER.info("Recipient's name entered.");
+        BaseDriver.threadWait(2);
+    }
+    @Test(priority = 10, groups = {"Smoke","Registration"}, description = "Your name entered successfully.")
+    @Description("Your name entered successfully.")
+    @Severity(SeverityLevel.CRITICAL)
+    public  void fillYourName(){
+        giftCardsPage.fillYourName();
+        LOGGER.info("Your name entered.");
+        BaseDriver.threadWait(2);
+    }
+    @Test(priority = 11, groups = {"Smoke","Registration"}, description = "Message entered successfully.")
+    @Description("Message entered successfully.")
+    @Severity(SeverityLevel.CRITICAL)
+    public  void fillMessage(){
+        giftCardsPage.fillMessage();
+        LOGGER.info("Message entered.");
+        BaseDriver.threadWait(2);
+    }
+    @Test(priority = 12,groups = {"Smoke","Login Test"}, description = "Add to Card button clicked successfully.")
+    @Description("Add to Card button clicked successfully.")
+    @Severity(SeverityLevel.CRITICAL)
+    public void clickAddToCardBtn(){
+        giftCardsPage.clickAddToCardBtn();
+        LOGGER.info("Add to Card button clicked.");
+        BaseDriver.threadWait(2);
+
+    }
+    @Test(priority = 13,groups = {"Smoke","Login Test"}, description = "Shopping card clicked successfully.")
+    @Description("Shopping card clicked successfully.")
+    @Severity(SeverityLevel.CRITICAL)
+    public void clickShoppingCard(){
+        giftCardsPage.clickShoppingCard();
+        LOGGER.info("Shopping Card button clicked.");
+        BaseDriver.threadWait(2);
+    }
+    @Test(priority = 14, groups = {"UITesting", "TAB Menu", "Order"}, description = "Verify that Product name is visible successfully")
+    @Description("Verify that Product name is visible successfully")
+    @Severity(SeverityLevel.CRITICAL)
+    public  void verifyProductName(){
+        giftCardsPage.verifyProductName();
+        LOGGER.info("Product name visible");
+        BaseDriver.threadWait(2);
+    }
+
+
 }
