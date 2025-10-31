@@ -37,8 +37,7 @@ public class US_503_PositiveAndNegativeLoginCombinations extends BaseGUITest {
     @Description("The customer enters an incorrect email address three times in the email field.")
     @Severity(SeverityLevel.CRITICAL)
     public void invalidLogin(String email, String password){
-        driver.get(ConfigReader.getProperty("baseURL"));
-        homePage.clickLoginButton();
+
         BaseDriver.threadWait(2);
         loginPage.fillLoginMask(email,password);
         BaseDriver.threadWait(3);
