@@ -34,16 +34,12 @@ public class LoginPage extends BasePage{
         wait.until(ExpectedConditions.visibilityOf(emailInput));
         emailInput.clear();
         emailInput.sendKeys(email);
-
     }
       public void passwordInput(String password) {
           wait.until(ExpectedConditions.visibilityOf(passwordInput));
           passwordInput.clear();
           passwordInput.sendKeys(password);
-
-
       }
-
       public void clickLoginBtn(){
         clickElement(loginButton);
       }
