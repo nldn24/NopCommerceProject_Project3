@@ -8,7 +8,6 @@ import utility.ConfigReader;
 
 public class RegisterPage extends BasePage {
 
-
     @FindBy(xpath = "//div[@class='page-title']/h1")
     private WebElement registerPageText;
 
